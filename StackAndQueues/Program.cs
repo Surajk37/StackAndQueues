@@ -6,7 +6,7 @@
         {
             Console.WriteLine("\t\tWelcome To Stack And Queues Problems\n");
             Console.WriteLine("Please Select Option From List");
-            Console.WriteLine("\n1. Create a Stack \n2. To Peek And Pop the Element from stack \n3. Create a Queue");
+            Console.WriteLine("\n1. Create a Stack \n2. To Peek And Pop the Element from stack \n3. Create a Queue \n4. To Dequeue A Element from Queue");
             int option = int.Parse(Console.ReadLine());
             //Calling Class and addind data to stack
             LinkedListStack linkedListStack = new LinkedListStack();
@@ -41,6 +41,23 @@
                     Console.WriteLine("----------------------------");
                     //Display Queue
                     linkedListQueue.Display();
+                    break;
+                case 4:
+                    linkedListQueue.Enqueue(56);
+                    linkedListQueue.Enqueue(30);
+                    linkedListQueue.Enqueue(70);
+                    Console.WriteLine("----------------");
+                    //Display Queue
+                    linkedListQueue.Display();
+                    Console.WriteLine("----------------");
+
+                    
+                    linkedListQueue.Dequeue();     //Dequeue from queue
+                    linkedListQueue.IsEmpty();     //Empty Dequeue
+
+                    //Display Queue after dequeue
+                    linkedListQueue.Display();
+                    Console.WriteLine("----------------");
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");
